@@ -1,5 +1,9 @@
 class Solution {
 public:
+    // Time complexity - O(n * t), space complexity - O(n * t) where n is the size of the input array nums
+    // t is half of the sum of all the numbers in the array nums
+    // dp[n][total/2] -> is it possible to get a subset with sum equal to total/2 using the elements of nums from
+    // index 0 to index n - 1.
     bool canPartition(vector<int>& nums)
     {
         int total = 0;
@@ -12,7 +16,7 @@ public:
         int n = nums.size();
 
         // dp[i][j] => is it possible to get a sum of j using values with index
-        // 0 to i from nums array?
+        // 0 to i - 1 from nums array?
         vector<vector<bool>> dp(n + 1, vector<bool>(total/2 + 1));
 
         // trivial case: it is always possible to get a sum of 0 - just don't select anything
