@@ -30,6 +30,10 @@ public:
             dp[i][i + 2] = padded[i] * padded[i + 1] * padded[i + 2];
         }
 
+        // We should focus on the last balloon to burst in a given range. If k is the last balloon to be burst
+        // among balloons between boundary indices l and r, then when k is burst, the coins earned will be 
+        // num[l] * nums[k] * nums[r].
+
         for (int len = 4; len <= n; len++)
         {
             for (int l = 0; l <= n - len; l++)
