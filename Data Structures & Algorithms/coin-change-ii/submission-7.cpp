@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // Space optimized version Space complexity = O(amount); we are using just 1 1-D array.
     int change(int amount, vector<int>& coins)
     {
         int n = coins.size();
