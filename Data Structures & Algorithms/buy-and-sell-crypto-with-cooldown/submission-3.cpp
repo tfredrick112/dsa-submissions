@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // This is the tabulation or bottom-up approach
+    // It is easy to understand this if you read it side-by-side with the memoization approach
     int maxProfit(vector<int>& prices)
     {
         int n = prices.size();
