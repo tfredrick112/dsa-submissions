@@ -19,12 +19,12 @@ public:
 
         for (int i = 1; i <= m; i++)
         {
-            int prev = dp[0];
+            bool prev = dp[0];
             dp[0] = false; // there cannot be a match for a non-empty s with an empty pattern p
 
             for (int j = 1; j <= n; j++)
             {
-                int temp = dp[j];
+                bool temp = dp[j];
 
                 if (s[i - 1] == p[j - 1] || p[j - 1] == '.')
                 {
