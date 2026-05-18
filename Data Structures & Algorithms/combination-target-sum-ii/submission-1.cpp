@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // Time complexity = O(n . 2^n): There are 2^n possible subsets and it takes O(n) time to copy a subset into the result array.
+    // Space: O(n) -> recursion stack and the curr array; output space - O(n . 2^ n)
     void backtrack(vector<int>& nums, int index, int sum, int target, vector<int>& curr, vector<vector<int>>& result)
     {
         if (sum == target)
