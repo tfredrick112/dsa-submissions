@@ -1,5 +1,12 @@
 class Solution {
 public:
+    // Time complexity - O(n * n * n!). Maximum upper limit for number of placements is O(n!) - there n positions to place the first queen in the first column,
+    // then n - 2 positions for the second queen in the second column and so on, so we get n! as the number of placements.
+    // In each placement, we call isSafePosition n times (1 time for 1 queen) and isSafePosition is a O(n) scan.
+    // Total time complexity = O(n! * n * n)
+    // Space complexity = O(n^2) for board, O(n^2 * n!) for the output space.
+
+    // This isSafePosition check is a O(n) check.
     bool isSafePosition(vector<string>& board, int i, int c)
     {
         // check if there is already a queen in the same row
