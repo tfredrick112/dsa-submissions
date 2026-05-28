@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // Time complexity = O(n log m), where n is the number of piles and m is the max pile size.
+    // Space complexity = O(1)
     int minEatingSpeed(vector<int>& piles, int h)
     {
         int n = piles.size();
@@ -18,6 +20,7 @@ public:
             long numHours = 0;
             for (int i = 0; i < n; i++)
             {
+                // a more efficient way to compute CEIL(piles[i]/speed) is to use ((piles[i] + speed - 1) / speed)
                 numHours += piles[i]/speed + (piles[i] % speed == 0 ? 0 : 1);
             }
 
