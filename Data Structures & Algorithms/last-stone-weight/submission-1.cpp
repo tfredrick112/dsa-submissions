@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // Time complexity = O(n log n) : A push / pop operation takes O(log n) time for a max heap. Space complexity = O(n)
     int lastStoneWeight(vector<int>& stones)
     {
         priority_queue<int> pq;
